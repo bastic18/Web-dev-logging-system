@@ -1,0 +1,11 @@
+<div class="card card-body mb-4">
+
+  <form (ngSubmit)="Submitlog()">
+    <div class="form-group">
+
+      <input type="text" [(ngModel)]="text" name="text"  class="form-control" placeholder="Add your project or assignment">
+    </div>
+    <input value="Add Info" type="submit" [disabled]="!this.text" class=" btn-light btn">
+    <button type="button" (dblclick)="clearstate()" [hidden]=!this.text   class=" btn btn-outline-danger" > Clear Log</button>
+  </form>
+</div>
